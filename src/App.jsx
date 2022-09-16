@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { getData } from "./utils";
 import styles from "./styles";
-import Card from "./components/Card/Card";
+import firebase from '../firebase-config' 
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
+import Home from "./pages/Home";
 
-function App() {
-  const [bizcos, setBizcos] = useState([]);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+]);
 
-  useEffect(() => {
-    getData().then(setBizcos);
-  }, []);
-
-  console.log({ bizcos });
+const App = () => {
+  console.log({firebase})
   return (
     <styles.AppContainer>
-      {!!bizcos &&
-        !!bizcos.length &&
-        bizcos.map((bizco) => <Card key={bizco.id} {...bizco} />)}
+       <RouterProvider router={router} />
     </styles.AppContainer>
   );
 }

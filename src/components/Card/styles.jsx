@@ -11,6 +11,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: black;
 `;
 const Image = styled.img`
   width: 100%;
