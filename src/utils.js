@@ -1,4 +1,6 @@
 import axios from "axios";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import firebase from "../firebase-config";
 
 const getStorage = (key = "") => {
   if (!key) return;
@@ -17,17 +19,26 @@ const setStorage = (key = "", data) => {
 export const getData = async () => {
   try {
     const isInStorage = getStorage("bizcochuelos");
+
     console.log({ isInStorage });
     if (isInStorage) {
       console.log("retorna el storage");
       return isInStorage;
     }
-    const { data } = await axios.get(
-      "https://sheet.best/api/sheets/f97aa33b-ad86-42a2-b0f4-89a1f5cf9b3f"
-    );
-    if (data && data.length) setStorage("bizcochuelos", data);
-    console.log("retorna la data geteada");
-    return data;
+
+    const fetchData = await getDocs(collection(firebase.db, "biscochuelos"));
+    let data = [];
+
+    fetchData.forEach((doc) => {
+      const docData = doc.data();
+      data.push(docData);
+    });
+
+    if (data?.length) {
+      setStorage("bizcochuelos", data);
+      return data;
+    }
+    return [];
   } catch (e) {
     console.log(e);
   }
