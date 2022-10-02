@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import WantThisButton from "./components/WantThisButton";
+import Star from "../../assets/star.png";
 import styled from "./styles";
 
 const Card = ({ id, type, name, size, price }) => {
@@ -10,8 +11,12 @@ const Card = ({ id, type, name, size, price }) => {
     <styled.Container>
       <styled.Image src={`/${id}.jpg`} />
       <styled.Wrapper>
-        <styled.Title>{name}</styled.Title>
+        <styled.Title>
+          {name}
+          <styled.Star src={Star} />
+        </styled.Title>
         <styled.SubTitle>{type}</styled.SubTitle>
+        <styled.Divisor />
         <styled.Description>
           <styled.TextWrapper>
             <styled.Text>Tamaño: </styled.Text>
@@ -28,13 +33,14 @@ const Card = ({ id, type, name, size, price }) => {
           </styled.TextWrapper>
           <styled.PriceWrapper>
             <styled.Text>Precio: </styled.Text>
-            <styled.Price>{pickedPrice}</styled.Price>
+            <styled.Price>${pickedPrice}</styled.Price>
           </styled.PriceWrapper>
         </styled.Description>
         <styled.ButtonWrapper>
           <WantThisButton price={pickedPrice} size={pickedSize} name={name} />
         </styled.ButtonWrapper>
       </styled.Wrapper>
+      <styled.colorBar name={name} />
     </styled.Container>
   );
 };
