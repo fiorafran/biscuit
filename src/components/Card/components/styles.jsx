@@ -12,10 +12,14 @@ const Button = styled.a`
   align-items: center;
   justify-content: space-evenly;
   color: #ffffff;
-  transition: background-color .15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
   &:hover {
     background-color: #29de7a;
     color: #ffffff;
+  }
+  @media (max-width: 700px) {
+    margin: 5px 0;
+    height: 30px;
   }
 `;
 

@@ -1,6 +1,7 @@
 export const colors = {
     main: '#FA9494',
-    secondary: '#CFD2CF'
+    secondary: '#ffffff'
+    // secondary: '#CFD2CF'
 }
 
 export const getColorBar = (name) => {

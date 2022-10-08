@@ -20,9 +20,7 @@ export const getData = async () => {
   try {
     const isInStorage = getStorage("bizcochuelos");
 
-    console.log({ isInStorage });
     if (isInStorage) {
-      console.log("retorna el storage");
       return isInStorage;
     }
 

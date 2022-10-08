@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./styles";
-import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
 import Search from "./components/Search";
+import { FilterSearchProvider } from "./context/filterSearchContext";
 
 const App = () => {
   return (
-    <styles.AppContainer>
+    <FilterSearchProvider>
       <Search />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Login" element={<Login />} />
-      </Routes>
-    </styles.AppContainer>
+      <styles.AppContainer>
+        <Home />
+      </styles.AppContainer>
+    </FilterSearchProvider>
   );
 };
 

@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 230px;
   max-width: 230px;
   overflow: hidden;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 15px;
   margin: 20px;
   display: flex;
@@ -16,6 +16,9 @@ const Container = styled.div`
   transition: all 0.2s ease-in-out;
   &:hover {
     box-shadow: 0px 0px 9px 5px rgba(0, 0, 0, 0.1);
+  }
+  @media (max-width: 700px) {
+    margin: 8px;
   }
 `;
 const Image = styled.img`
@@ -78,7 +81,6 @@ const PriceWrapper = styled.div`
   justify-content: flex-start;
 `;
 const Text = styled.div`
-  /* margin-right: 60px; */
   width: 60%;
 `;
 const Select = styled.select`
@@ -86,6 +88,7 @@ const Select = styled.select`
   padding: 3px 7px;
   margin: 2px 0 6px;
   background-color: transparent;
+  color: black;
   outline: none;
   border: 1px solid #ededed;
   border-radius: 5px;
@@ -125,5 +128,5 @@ export default {
   Price,
   ButtonWrapper,
   colorBar,
-  Star
+  Star,
 };

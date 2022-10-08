@@ -1,0 +1,152 @@
+[
+  {
+      "id": "2",
+      "size": [
+          18,
+          24
+      ],
+      "type": "Bizcochuelo",
+      "price": "{\"18\":550,\"24\":650}",
+      "keywords": [
+          "chocolate"
+      ],
+      "name": "Chocolate"
+  },
+  {
+      "keywords": [
+          "ddl",
+          "dulce de leche"
+      ],
+      "price": "{\"18\":550,\"24\":660}",
+      "size": [
+          18,
+          24
+      ],
+      "id": "1",
+      "type": "Bizcochuelo",
+      "name": "Dulce de leche"
+  },
+  {
+    "id": "3",
+    "size": [
+        18,
+        24
+    ],
+    "type": "Bizcochuelo",
+    "price": "{\"18\":550,\"24\":650}",
+    "keywords": [
+        "chocolate"
+    ],
+    "name": "Chocolate"
+},
+{
+    "keywords": [
+        "ddl",
+        "dulce de leche"
+    ],
+    "price": "{\"18\":550,\"24\":660}",
+    "size": [
+        18,
+        24
+    ],
+    "id": "4",
+    "type": "Bizcochuelo",
+    "name": "Dulce de leche"
+},
+{
+  "id": "5",
+  "size": [
+      18,
+      24
+  ],
+  "type": "Bizcochuelo",
+  "price": "{\"18\":550,\"24\":650}",
+  "keywords": [
+      "chocolate"
+  ],
+  "name": "Chocolate"
+},
+{
+  "keywords": [
+      "ddl",
+      "dulce de leche"
+  ],
+  "price": "{\"18\":550,\"24\":660}",
+  "size": [
+      18,
+      24
+  ],
+  "id": "6",
+  "type": "Bizcochuelo",
+  "name": "Dulce de leche"
+},
+{
+  "id": "7",
+  "size": [
+      18,
+      24
+  ],
+  "type": "Bizcochuelo",
+  "price": "{\"18\":550,\"24\":650}",
+  "keywords": [
+      "chocolate"
+  ],
+  "name": "Chocolate"
+},
+{
+  "keywords": [
+      "ddl",
+      "dulce de leche"
+  ],
+  "price": "{\"18\":550,\"24\":660}",
+  "size": [
+      18,
+      24
+  ],
+  "id": "8",
+  "type": "Bizcochuelo",
+  "name": "Dulce de leche"
+},
+{
+  "keywords": [
+      "ddl",
+      "dulce de leche"
+  ],
+  "price": "{\"18\":550,\"24\":660}",
+  "size": [
+      18,
+      24
+  ],
+  "id": "9",
+  "type": "Bizcochuelo",
+  "name": "Dulce de leche"
+},
+{
+  "keywords": [
+      "ddl",
+      "dulce de leche"
+  ],
+  "price": "{\"18\":550,\"24\":660}",
+  "size": [
+      18,
+      24
+  ],
+  "id": "10",
+  "type": "Bizcochuelo",
+  "name": "Dulce de leche"
+},
+{
+  "keywords": [
+      "ddl",
+      "dulce de leche"
+  ],
+  "price": "{\"18\":550,\"24\":660}",
+  "size": [
+      18,
+      24
+  ],
+  "id": "11",
+  "type": "Bizcochuelo",
+  "name": "Dulce de leche"
+}
+]
