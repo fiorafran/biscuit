@@ -1,5 +1,4 @@
-import axios from "axios";
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import firebase from "../firebase-config";
 
 const getStorage = (key = "") => {
