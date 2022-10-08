@@ -1,10 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styled from "./styles";
 import Logo from "../../assets/logo.png";
 import FilterSearchProvider from "../../context/filterSearchContext";
 
 const Search = () => {
-  const handleSearch = ({ target }) => setKeyword(target.value);
+  const [localKeyword, setLocalKeyword] = useState('');
+  const handleSearch = ({ target }) => {
+    setLocalKeyword(target.value)
+    const formatKeyword = target.value.trim().toLowerCase().replaceAll('  ', ' ');
+    setKeyword(formatKeyword);
+  }
   const { keyword, setKeyword } = useContext(FilterSearchProvider);
   return (
     <styled.Wrapper>
@@ -12,7 +17,7 @@ const Search = () => {
       <styled.WrapperImage></styled.WrapperImage>
       <styled.Search
         placeholder="Buscar"
-        value={keyword}
+        value={localKeyword}
         onChange={handleSearch}
       />
     </styled.Wrapper>
