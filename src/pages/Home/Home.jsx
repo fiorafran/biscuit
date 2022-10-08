@@ -11,7 +11,6 @@ const Home = () => {
     getData().then(setBizcos);
   }, []);
 
-  console.log({ bizcos });
   return (
     !!bizcos?.length &&
     bizcos.map((bizco) => {
